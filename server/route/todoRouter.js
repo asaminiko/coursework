@@ -5,4 +5,6 @@ const authMiddleware = require('../middleware/authMiddleware.js')
 router.post('/create', authMiddleware, todoController.create)
 router.get('/getAll', authMiddleware, todoController.getAll)
 router.get('/:id', authMiddleware, todoController.getOne)
+router.delete('/delete/:id', authMiddleware, todoController.deleteTask)
+router.put('/update/:id', authMiddleware, todoController.updateTask)
 module.exports = router
