@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../components/Button'
+import Btn from '../components/Btn'
 const GeneralPage = () => {
   return (
     <div>
@@ -8,8 +8,8 @@ const GeneralPage = () => {
       </div>
       <div className='block'>
         <div className='myBtnBlock'>
-          <Button className='btn m-3 btn-primary'>Зареєструватися</Button>
-          <Button className='btn m-3 btn-primary '>Увійти</Button>
+          <Btn className='btn m-3 btn-primary'>Зареєструватися</Btn>
+          <Btn className='btn m-3 btn-primary '>Увійти</Btn>
         </div>
         <div className='ml-5'>
           <h3>Плануй свій день</h3>

@@ -1,22 +1,20 @@
 import React from 'react'
-import Button from './Button'
+import Form from 'react-bootstrap/Form'
 const CreateTask = () => {
   return (
     <>
       <input type='text' className='frame2' placeholder='Нове завдання' />
       <div className='input-group'>
-        <select className='form-select' id='inputGroupSelect01'>
-          <option selected disabled>
-            Пріоритет
-          </option>
+        <Form.Select aria-label='Default select example'>
+          <option>Пріоритет</option>
           <option value='1'>1</option>
           <option value='2'>2</option>
           <option value='3'>3</option>
-          <option value='3'>4</option>
-          <option value='3'>5</option>
-        </select>
+          <option value='4'>4</option>
+          <option value='5'>5</option>
+        </Form.Select>
       </div>
-      <Button className='my_btn createBtn'>Створити</Button>
+      <button className='my_btn createBtn'>Створити</button>
     </>
   )
 }

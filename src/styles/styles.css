@@ -84,7 +84,7 @@ span {
   opacity: 30%;
 }
 .my_btn:hover {
-  background-color: #e8e2fe6f;
+  background-color: #e8e2fe6f !important;
 }
 .task {
   font-size: 0.9em;
@@ -123,4 +123,16 @@ span {
 }
 .block {
   margin-top: 5em;
+}
+.sortBtn {
+  box-shadow: none;
+}
+.sortBtn:focus{
+  n
+}
+.sortBtn:focus,
+.sortBtn.show {
+  background: none !important;
+  color: #000 !important;
+  box-shadow: none !important;
 }

@@ -1,5 +1,6 @@
 import React from 'react'
-import Button from '../components/Button'
+import Btn from '../components/Btn'
+import Form from 'react-bootstrap/Form'
 const Auth = () => {
   return (
     <div>
@@ -8,28 +9,22 @@ const Auth = () => {
       </div>
       <div className='form'>
         <div className='container'>
-          <label htmlFor='exampleFormControlInput1' className='form-label'>
-            Email
-          </label>
-          <input
-            type='email'
-            className='form-control'
-            id='exampleFormControlInput1'
-            placeholder='name@example.com'
-          />
+          <Form>
+            <Form.Group className='mb-3' controlId='exampleForm.ControlInput1'>
+              <Form.Label>Email</Form.Label>
+              <Form.Control type='email' placeholder='name@example.com' />
+            </Form.Group>
+          </Form>
         </div>
         <div className='container'>
-          <label htmlFor='exampleFormControlInput1' className='form-label'>
-            Password
-          </label>
-          <input
-            type='password'
-            className='form-control'
-            id='exampleFormControlInput1'
-            placeholder='name@example.com'
-          />
+          <Form>
+            <Form.Group className='mb-3' controlId='exampleForm.ControlInput1'>
+              <Form.Label>Password</Form.Label>
+              <Form.Control type='password' placeholder='password' />
+            </Form.Group>
+          </Form>
         </div>
-        <Button className='btn btn-primary btnReg'>Увійти</Button>
+        <Btn className='btn btn-primary btnReg'>Увійти</Btn>
       </div>
     </div>
   )

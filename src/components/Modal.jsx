@@ -1,38 +1,27 @@
-import React from 'react'
-const Modal = () => {
+import Button from 'react-bootstrap/Button'
+import Modal from 'react-bootstrap/Modal'
+
+function Modal() {
   return (
-    <>
-      <div class='modal' tabindex='-1'>
-        <div class='modal-dialog'>
-          <div class='modal-content'>
-            <div class='modal-header'>
-              <h5 class='modal-title'>Modal title</h5>
-              <button
-                type='button'
-                class='btn-close'
-                data-bs-dismiss='modal'
-                aria-label='Close'
-              ></button>
-            </div>
-            <div class='modal-body'>
-              <p>Modal body text goes here.</p>
-            </div>
-            <div class='modal-footer'>
-              <button
-                type='button'
-                class='btn btn-secondary'
-                data-bs-dismiss='modal'
-              >
-                Close
-              </button>
-              <button type='button' class='btn btn-primary'>
-                Save changes
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+    <div
+      className='modal show'
+      style={{ display: 'block', position: 'initial' }}
+    >
+      <Modal.Dialog>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal title</Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body>
+          <p>Modal body text goes here.</p>
+        </Modal.Body>
+
+        <Modal.Footer>
+          <Button variant='secondary'>Close</Button>
+          <Button variant='primary'>Save changes</Button>
+        </Modal.Footer>
+      </Modal.Dialog>
+    </div>
   )
 }
 

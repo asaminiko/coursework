@@ -1,6 +1,7 @@
 import React from 'react'
-import Card from '../components/Card'
 import CreateTask from '../components/CreateTask'
+import { Card } from 'react-bootstrap'
+import Dropdown from 'react-bootstrap/Dropdown'
 const Home = () => {
   return (
     <>
@@ -8,44 +9,46 @@ const Home = () => {
         <div className='frame3'>
           <p className='logo'>ToDo</p>
           <CreateTask />
-          <div className='dropdown'>
-            <button
-              className='my_btn sortBtn'
-              type='button'
-              data-bs-toggle='dropdown'
-              aria-expanded='false'
-            >
+          <Dropdown>
+            <Dropdown.Toggle id='dropdown-basic' className='my_btn sortBtn'>
               Сортувати
-            </button>
-            <ul className='dropdown-menu'>
-              <li>
-                <a className='dropdown-item' href='/'>
-                  за пріоритетом
-                </a>
-              </li>
-              <li>
-                <a className='dropdown-item' href='/'>
-                  за датою
-                </a>
-              </li>
-            </ul>
-          </div>
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item href='#/action-1'>за пріоритетом</Dropdown.Item>
+              <Dropdown.Item href='#/action-2'>за датою</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
         </div>
       </div>
 
       <div className='cards'>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
+        <Card className='mb-3 p-3'>
+          <Card.Header>
+            <span> Дата: </span>
+            <span> Пріоритет: </span>
+          </Card.Header>
+          <Card.Body>
+            <Card.Text>sdassasdasasdasd</Card.Text>
+          </Card.Body>
+        </Card>
+        <Card className='mb-3 p-3'>
+          <Card.Header>
+            <span> Дата: </span>
+            <span> Пріоритет: </span>
+          </Card.Header>
+          <Card.Body>
+            <Card.Text>sdassasdasasdasd</Card.Text>
+          </Card.Body>
+        </Card>
+        <Card className='mb-3 p-3'>
+          <Card.Header>
+            <span> Дата: </span>
+            <span> Пріоритет: </span>
+          </Card.Header>
+          <Card.Body>
+            <Card.Text>sdassasdasasdasd</Card.Text>
+          </Card.Body>
+        </Card>
       </div>
     </>
   )
