@@ -3,9 +3,17 @@ import Form from 'react-bootstrap/Form'
 const CreateTask = () => {
   return (
     <>
-      <input type='text' className='frame2' placeholder='Нове завдання' />
+      <Form.Control
+        type='text'
+        className='frame2 formClick'
+        placeholder='Нове завдання'
+      />
+
       <div className='input-group'>
-        <Form.Select aria-label='Default select example'>
+        <Form.Select
+          aria-label='Default select example'
+          className='dropdownStyle'
+        >
           <option>Пріоритет</option>
           <option value='1'>1</option>
           <option value='2'>2</option>

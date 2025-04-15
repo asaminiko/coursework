@@ -46,18 +46,19 @@ body {
   height: 30px;
   margin-left: 1em;
   margin-right: 1em;
-  background-color: #e8e2fe;
+  background-color: #e8e2fe !important;
   color: black;
   border: none;
   border-radius: 5%;
+  box-shadow: none;
 }
 .createBtn {
-  width: 60px;
-  height: 40px;
+  width: 6em;
+  height: 4em;
 }
 .sortBtn {
-  width: 100px;
-  height: 30px;
+  width: 8em;
+  height: 3em;
 }
 .dropdown-menu {
   width: 20%;
@@ -85,12 +86,22 @@ span {
 }
 .my_btn:hover {
   background-color: #e8e2fe6f !important;
+  color: #cb62c0 !important;
+}
+.my_btn:focus {
+  background-color: #e8e2fe6f !important;
+  color: #cb62c0 !important;
+  box-shadow: none !important;
 }
 .task {
   font-size: 0.9em;
 }
 .input-group {
   width: 8em;
+}
+.dropdownStyle {
+  box-shadow: none !important;
+  border: none !important;
 }
 .form-select {
   font-size: 0.7em;
@@ -124,15 +135,20 @@ span {
 .block {
   margin-top: 5em;
 }
-.sortBtn {
-  box-shadow: none;
+
+.btnForm {
+  width: 10em;
+  height: 4em;
 }
-.sortBtn:focus{
-  n
-}
-.sortBtn:focus,
-.sortBtn.show {
-  background: none !important;
-  color: #000 !important;
+.formClick {
   box-shadow: none !important;
+}
+.exit {
+  background-color: #e8e2fe51 !important;
+  width: 4em;
+  height: 3em;
+}
+.btnFormBlock {
+  display: flex;
+  justify-self: start;
 }

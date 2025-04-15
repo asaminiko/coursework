@@ -1,12 +1,16 @@
 import React from 'react'
 import CreateTask from '../components/CreateTask'
-import { Card } from 'react-bootstrap'
 import Dropdown from 'react-bootstrap/Dropdown'
+import Mytext from '../components/Mytext'
+import Nav from 'react-bootstrap/Nav'
 const Home = () => {
   return (
     <>
       <div className='frame1'>
         <div className='frame3'>
+          <Nav.Link href='/general'>
+            <button className='my_btn exit'>Вийти</button>
+          </Nav.Link>
           <p className='logo'>ToDo</p>
           <CreateTask />
           <Dropdown>
@@ -22,33 +26,7 @@ const Home = () => {
       </div>
 
       <div className='cards'>
-        <Card className='mb-3 p-3'>
-          <Card.Header>
-            <span> Дата: </span>
-            <span> Пріоритет: </span>
-          </Card.Header>
-          <Card.Body>
-            <Card.Text>sdassasdasasdasd</Card.Text>
-          </Card.Body>
-        </Card>
-        <Card className='mb-3 p-3'>
-          <Card.Header>
-            <span> Дата: </span>
-            <span> Пріоритет: </span>
-          </Card.Header>
-          <Card.Body>
-            <Card.Text>sdassasdasasdasd</Card.Text>
-          </Card.Body>
-        </Card>
-        <Card className='mb-3 p-3'>
-          <Card.Header>
-            <span> Дата: </span>
-            <span> Пріоритет: </span>
-          </Card.Header>
-          <Card.Body>
-            <Card.Text>sdassasdasasdasd</Card.Text>
-          </Card.Body>
-        </Card>
+        <Mytext />
       </div>
     </>
   )

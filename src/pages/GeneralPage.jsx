@@ -1,5 +1,5 @@
 import React from 'react'
-import Btn from '../components/Btn'
+import Nav from 'react-bootstrap/Nav'
 const GeneralPage = () => {
   return (
     <div>
@@ -8,8 +8,12 @@ const GeneralPage = () => {
       </div>
       <div className='block'>
         <div className='myBtnBlock'>
-          <Btn className='btn m-3 btn-primary'>Зареєструватися</Btn>
-          <Btn className='btn m-3 btn-primary '>Увійти</Btn>
+          <Nav.Link href='/register'>
+            <button className='my_btn btnForm '>Зареєструватися</button>
+          </Nav.Link>
+          <Nav.Link href='/auth'>
+            <button className='my_btn btnForm '>Увійти</button>
+          </Nav.Link>
         </div>
         <div className='ml-5'>
           <h3>Плануй свій день</h3>

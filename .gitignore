@@ -1,4 +1,2 @@
 node_modules/
-client/src/components/Modal.jsx
-client/src/styles/styles.css
-client/src/pages/Home.jsx
+./Modal.jsx
