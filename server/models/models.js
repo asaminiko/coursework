@@ -11,7 +11,7 @@ const Todo = sequelize.define('todo', {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
   text: { type: DataTypes.STRING, allowNull: false },
   date: { type: DataTypes.DATE, allowNull: false },
-  priority: { type: DataTypes.INTEGER, defaultValue: '5' },
+  priority: { type: DataTypes.INTEGER, defaultValue: '1' },
 })
 User.hasMany(Todo)
 Todo.belongsTo(User)

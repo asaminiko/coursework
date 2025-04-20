@@ -73,8 +73,8 @@ class TodoController {
       if (!userId) {
         return next(ApiError.badRequest('Ви не увійшли'))
       }
-      if (!priority || !text) {
-        return next(ApiError.badRequest('Поле priority і text обовʼязкові'))
+      if (!text) {
+        return next(ApiError.badRequest('Поле text обовʼязкове'))
       }
 
       const todo = await Todo.update(
