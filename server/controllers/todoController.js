@@ -4,15 +4,15 @@ class TodoController {
   async create(req, res, next) {
     try {
       const { text, priority } = req.body
-      const userId = req.user.id
+      const userId = req.user.id //id користувача
       if (!userId) {
         return next(ApiError.badRequest('Ви не увійшли'))
       }
-      const date = Date.now()
+      const date = Date.now() //означає як дата створення завдання
       if (!text) {
         return next(ApiError.badRequest('Поле text обовʼязкове'))
       }
-
+      // Створення завдання
       const todo = await Todo.create({
         priority,
         text,
@@ -28,7 +28,7 @@ class TodoController {
 
   async getAll(req, res, next) {
     try {
-      const userId = req.user.id
+      const userId = req.user.id //id користувача
       let allTodos
       if (userId) {
         allTodos = await Todo.findAndCountAll({ where: { userId } })
@@ -43,13 +43,13 @@ class TodoController {
   }
 
   async getOne(req, res) {
-    const userId = req.user.id
+    const userId = req.user.id //id користувача
     if (!userId) {
       return next(ApiError.badRequest('Ви не увійшли'))
     }
     const { id } = req.params
     const todo = await Todo.findOne({
-      where: { id, userId },
+      where: { id, userId }, //Бере завдання з таким самим id та userId
     })
     return res.json(todo)
   }
@@ -73,8 +73,8 @@ class TodoController {
       if (!userId) {
         return next(ApiError.badRequest('Ви не увійшли'))
       }
-      if (!priority || !text) {
-        return next(ApiError.badRequest('Поле priority і text обовʼязкові'))
+      if (!text) {
+        return next(ApiError.badRequest('Поле text обовʼязкове'))
       }
 
       const todo = await Todo.update(

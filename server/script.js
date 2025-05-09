@@ -12,8 +12,8 @@ app.use('/api', router)
 
 const start = async () => {
   try {
-    await sequelize.authenticate()
-    sequelize.sync()
+    await sequelize.authenticate() //перевіряє підключення до БД
+    sequelize.sync() //Синхронізує моделі
     app.listen(PORT, () => console.log(`Server started on port ${PORT}`))
   } catch (e) {
     console.log(e)
